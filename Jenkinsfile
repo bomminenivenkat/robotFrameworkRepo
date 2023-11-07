@@ -8,7 +8,7 @@ pipeline {
                 // --nostatusrc prevents your job from failing automatically if any
                 // tests fail. This is then later handled with the RF plugin with
                 // pass thresholds
-                script: "robot --nostatusrc tests.robot", returnStatus: true
+                sh script: "robot --nostatusrc tests.robot", returnStatus: true
             }
         }
     }
@@ -17,8 +17,8 @@ pipeline {
         always {
             // `onlyCritical: false` is for RF 3.x compatibility. This will be deprecated
             // and removed in the future.
-            //robot outputPath: '.', passThreshold: 80.0, unstableThreshold: 70.0, onlyCritical: false
-            echo "Successful"
+            robot outputPath: '.', passThreshold: 80.0, unstableThreshold: 70.0, onlyCritical: false
+            //echo "Successful"
         }
     }
 }
