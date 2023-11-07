@@ -1,6 +1,7 @@
 pipeline {
-    agent { label "robot" } // run on an agent, which has Robot Framework installed
-
+    //agent { label "robot" } // run on an agent, which has Robot Framework installed
+    agent any
+    
     stages {
         stage("Run Robot") {
             steps {
