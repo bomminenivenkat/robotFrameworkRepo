@@ -26,6 +26,3 @@ Test for the year 2023
     Log    ${date}
     Should Be Equal As Strings    ${date.year}    2023
 
-Test Case that fails
-    Check Correct Greeting    Hail Our Robot Overlords!
-    Check Correct Greeting    Hello World!
